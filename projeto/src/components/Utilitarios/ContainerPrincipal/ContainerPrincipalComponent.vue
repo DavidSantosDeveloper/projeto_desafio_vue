@@ -1,9 +1,16 @@
 <template>
    
-   <div class="container-menu-lateral">
-   
-   
-   </div>
+   <section class="container-conteudo">
+        <section class="container-menu-opcoes-principais">
+            <div class="container-linha">
+                
+            </div>
+            <div class="container-linha">
+
+            </div>
+
+        </section>
+   </section>
     
    </template>
      

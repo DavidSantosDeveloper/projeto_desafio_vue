@@ -1,7 +1,8 @@
 <template>
     <main class="home">
-      <HeaderComponent msg="Welcome to Your Vue.js + TypeScript App"/>
-      <MenuComponent msg="Welcome to Your Vue.js + TypeScript App"/>
+      <HeaderComponent msg=""/>
+      <MenuComponent msg=""/>
+      <ContainerPrincipalComponent  />
     </main>
   </template>
   
@@ -9,12 +10,13 @@
   import { defineComponent } from 'vue';
   import MenuComponent from '@/components/Utilitarios/menu/MenuComponent.vue'; // @ is an alias to /src
   import HeaderComponent from '@/components/Utilitarios/header/HeaderComponent.vue';
-  
+  import ContainerPrincipalComponent from '@/components/Utilitarios/ContainerPrincipal/ContainerPrincipalComponent.vue';
   export default defineComponent({
     name: 'UtilitariosView',
     components: {
       HeaderComponent,
-      MenuComponent
+      MenuComponent,
+      ContainerPrincipalComponent
     },
   });
   </script>
@@ -23,8 +25,8 @@ main{
     width:100vw;
     height:100vh;
     display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: 6.5104166vh 1fr;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content 1fr;
     grid-template-areas: "header header" "menu container-conteudo";
     
     & header{
