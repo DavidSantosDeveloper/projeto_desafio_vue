@@ -37,18 +37,23 @@
     </div>
   </nav>
  -->
-  
+<div class="container-menu-lateral">
   <nav >
-    <div class="container-marca">
-        <img src="" />
-        <a>Utilitarios</a>    
-    </div>
-    <div class="container-manager">
-        <a>Manager</a>
-    </div>
+      <a href=""> <img src="../../../assets/menu_icone_1.png" alt="" /> </a>
+      <a href=""> <img src="../../../assets/menu_icone_2.png" alt="" /> </a>
+      <a href=""> <img src="../../../assets/menu_icone_3.png" alt="" /> </a>
+      <a href=""> <img src="../../../assets/menu_icone_4.png" alt="" /> </a>
+      <a href=""> <img src="../../../assets/menu_icone_5.png" alt="" /> </a>
+      <a href=""> <img src="../../../assets/menu_icone_6.png" alt="" /> </a>
     
   </nav>
-  </template>
+  <div class="container-da-logo">
+        <img src="../../../assets/menu_icone_7.png" alt="" />
+  </div>
+
+</div>
+ 
+</template>
   
   <script lang="ts">
   import { defineComponent } from 'vue';
@@ -63,8 +68,21 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped lang="scss">
-.navbar-toggler-icon{
-  color:white !important;
+.container-menu-lateral{
+   background-color: #0091FF;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around; 
+   & nav{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     min-height:335px;
+     height:43.619791vh;
+     width:max-content;
+     border:2px solid white;
+   }
 }
 
 
