@@ -54,6 +54,7 @@
                     <datalist id="perfil">
                           <option value="Admin"/>
                           <option value="Gerente"/>
+                          <option value="Funcionário"/>
                     </datalist>
 
                     <label for="funcao">Função:</label>
