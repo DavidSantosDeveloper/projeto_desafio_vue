@@ -4,7 +4,7 @@
         <section class="container-menu-opcoes-principais">
             <section class="opcoes">
                   <h1>Usuários</h1>
-                  <a href=""> <img src="../../../assets/usuarios_butao_mais.png" alt=""> </a>
+                  <button > <img src="../../../assets/usuarios_butao_mais.png" alt=""> </button>
             </section>
 
         </section>
