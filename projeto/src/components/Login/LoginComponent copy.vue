@@ -6,11 +6,11 @@
               <h1 class="">Login</h1>
               <div class="container-input-email">
                 <label for="staticEmail2" class="">Email</label>
-                <input type="text"  class=""  placeholder="" id="username" v-model="this.username" required>
+                <input type="text"  class=""  placeholder="" id="username" v-model="username" required>
               </div>
               <div class="container-input-senha">
                 <label for="inputPassword2" class="">Senha</label>
-                <input type="password" class="" placeholder="" id="password" v-model="this.password" required>
+                <input type="password" class="" placeholder="" id="password" v-model="password" required>
               </div>
               <div class=" d-flex justify-content-between container-opcoes justify-content-between">
                 <a href="" class="">Esqueceu a senha?</a>
@@ -35,34 +35,39 @@ import router from '../../../src/router/index';
 
 export default defineComponent({
   name: 'LoginComponent',
-  username:"",
-  password:"",
-  errorMessage:"",
   props: {
     msg: String,
   },
-  methods:{
-    async handleSubmit() {
+  setup() {
+    const username = reactive({
+      value: ""
+    });
+    const password = reactive({
+      value: ""
+    });
+    let errorMessage =reactive({
+      value: ""
+    });;
+   
+    const handleSubmit = async () => {
       try {
-        const response = await LoginService.Autentificar(this.username, this.password);
-        if(response.token!=undefined){
-            // Armazenar token de autenticação 
-            localStorage.setItem('authToken', response.token);
-            // Redirecionar para página principal após login
-            router.push('/utilitarios');
-        }
-        else{
-           console.log("email ou senha errado 1!")
-        }
-       
+        const response = await LoginService.Autentificar(username.value, password.value);
+        // Armazenar token de autenticação (ex: localStorage)
+        localStorage.setItem('authToken', response.token);
+        // Redirecionar para página principal após login
+        router.push('/utilitarios');
       } catch (error) {
-        this.errorMessage = error.message;
-        console.log("email ou senha errado 2!")
-        window.alert("email ou senha errados")
+        errorMessage = error.message;
       }
-    },
-  }
+    };
 
+    return {
+      username,
+      password,
+      errorMessage,
+      handleSubmit
+    };
+  }
 });
 </script>
 
