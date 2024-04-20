@@ -4,7 +4,7 @@
         <section class="container-menu-opcoes-principais">
             <section class="opcoes">
                   <h1>Usuários</h1>
-                  <button > <img src="../../../assets/usuarios_butao_mais.png" alt=""> </button>
+                  <button type="button"> <img src="../../../assets/usuarios_butao_mais.png" alt="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> </button>
             </section>
 
         </section>
