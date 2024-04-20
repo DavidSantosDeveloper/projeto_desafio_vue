@@ -10,7 +10,8 @@
         </section>
 
         <section class="container-lista-de-usuarios">
-             <MensagemSemUsuariosComponent />
+             <!-- <MensagemSemUsuariosComponent /> -->
+              <ModalFormularioComponent/>
         </section>
    </section>
     
@@ -20,6 +21,7 @@
      import { defineComponent } from 'vue';
      import CardOpcaoComponent from "@/components/Utilitarios/CardOpcao/CardOpcaoComponent.vue"
      import MensagemSemUsuariosComponent from '@/components/Usuarios/MensagemSemUsuarios/MensagemSemUsuariosComponent.vue'
+     import ModalFormularioComponent from "@/components/Usuarios/ModalFormulario/ModalFormularioComponent.vue"
      
      export default defineComponent({
        name: 'ContainerPrincipalComponent',
@@ -28,7 +30,8 @@
        },
        components: {
         CardOpcaoComponent,
-        MensagemSemUsuariosComponent
+        MensagemSemUsuariosComponent,
+        ModalFormularioComponent
       },
      });
      </script>
