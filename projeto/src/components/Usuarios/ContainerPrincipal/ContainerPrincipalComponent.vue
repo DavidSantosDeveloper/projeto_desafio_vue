@@ -12,6 +12,8 @@
         <section class="container-lista-de-usuarios">
              <!-- <MensagemSemUsuariosComponent /> -->
               <ModalFormularioComponent/>
+
+              <CardFuncionarioComponent />
         </section>
    </section>
     
@@ -22,7 +24,8 @@
      import CardOpcaoComponent from "@/components/Utilitarios/CardOpcao/CardOpcaoComponent.vue"
      import MensagemSemUsuariosComponent from '@/components/Usuarios/MensagemSemUsuarios/MensagemSemUsuariosComponent.vue'
      import ModalFormularioComponent from "@/components/Usuarios/ModalFormulario/ModalFormularioComponent.vue"
-     
+     import CardFuncionarioComponent from "@/components/Usuarios/CardFuncionario/CardFuncionarioComponent.vue"
+
      export default defineComponent({
        name: 'ContainerPrincipalComponent',
        props: {
@@ -31,7 +34,8 @@
        components: {
         CardOpcaoComponent,
         MensagemSemUsuariosComponent,
-        ModalFormularioComponent
+        ModalFormularioComponent,
+        CardFuncionarioComponent
       },
      });
      </script>
@@ -42,8 +46,8 @@
   margin-left:0.5vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
 
  border:5px solid red;
   & .container-menu-opcoes-principais{
