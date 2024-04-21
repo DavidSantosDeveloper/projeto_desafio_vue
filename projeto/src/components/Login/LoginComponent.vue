@@ -12,10 +12,14 @@
                 <label for="inputPassword2" class="">Senha</label>
                 <input type="password" class="" placeholder="" id="password" v-model="this.password" required>
               </div>
+              <p v-if="this.dadosEstaoIncorretos.value==true" >Email ou senha incorretos!</p>
+             
               <div class=" d-flex justify-content-between container-opcoes justify-content-between">
                 <a href="" class="">Esqueceu a senha?</a>
                 <button type="submit" class="butao-entrar">Entrar</button>
+                
               </div>
+             
         </form>
       </section>
       <section class="container-banner">
@@ -37,9 +41,11 @@ export default defineComponent({
   name: 'LoginComponent',
   username:"",
   password:"",
-  errorMessage:"",
   props: {
     msg: String,
+  },
+  setup(){
+      return{dadosEstaoIncorretos:reactive({value:false})}
   },
   methods:{
     async handleSubmit() {
@@ -48,17 +54,14 @@ export default defineComponent({
         if(response.token!=undefined){
             // Armazenar token de autenticação 
             localStorage.setItem('authToken', response.token);
+            this.dadosEstaoIncorretos.value=false
             // Redirecionar para página principal após login
             router.push('/utilitarios');
         }
-        else{
-           console.log("email ou senha errado 1!")
-        }
        
       } catch (error) {
-        this.errorMessage = error.message;
-        console.log("email ou senha errado 2!")
-        window.alert("email ou senha errados")
+        this.dadosEstaoIncorretos.value=true
+        window.alert("email ou senha errados!")
       }
     },
   }
@@ -156,9 +159,15 @@ section.login{
       padding: 5px 40px;
     }
   }
+ 
 
  
 }
+p{
+    color: red;
+    margin:0px;
+    padding:0px;
+  }
 
 .container-banner{
   grid-area: banner;
