@@ -9,11 +9,23 @@
 
         </section>
 
-        <section class="container-lista-de-usuarios">
+        <section class="container-lista-de-usuarios" >
              <!-- <MensagemSemUsuariosComponent /> -->
-              <ModalFormularioComponent/>
+             <ModalFormularioComponent/>
 
-              <CardFuncionarioComponent />
+             <div v-for="funcionario in usuarios" :key="funcionario.id">
+                <CardFuncionarioComponent 
+                :nome="funcionario.nome" 
+                :cpf_cnpj_formatado="funcionario.id" 
+                :cidade="funcionario.cidade"
+                :endereco_residencial="funcionario.endereco_residencial"
+                :perfil_str="funcionario.perfil_str"
+                :status="funcionario.status"
+                />
+             </div>
+              
+
+             
         </section>
    </section>
     
@@ -25,6 +37,7 @@
      import MensagemSemUsuariosComponent from '@/components/Usuarios/MensagemSemUsuarios/MensagemSemUsuariosComponent.vue'
      import ModalFormularioComponent from "@/components/Usuarios/ModalFormulario/ModalFormularioComponent.vue"
      import CardFuncionarioComponent from "@/components/Usuarios/CardFuncionario/CardFuncionarioComponent.vue"
+     import UsuariosService from "../../../services/UsuariosService/UsuariosService"
 
      export default defineComponent({
        name: 'ContainerPrincipalComponent',
@@ -37,6 +50,24 @@
         ModalFormularioComponent,
         CardFuncionarioComponent
       },
+      data() {
+              return {usuarios: [] };
+          },
+      mounted() {
+          this.carregarUsuarios();
+      },
+      methods:{
+            async carregarUsuarios() {
+              try {
+                const response_json = await UsuariosService.obterTodosUsuarios();
+                this.usuarios = response_json.results;
+              } catch (error) {
+                console.error(error);
+              }
+            }
+       },
+        
+       
      });
      </script>
      

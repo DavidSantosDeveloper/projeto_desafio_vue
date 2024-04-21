@@ -19,7 +19,7 @@
       HeaderComponent,
       MenuComponent,
       ContainerPrincipalComponent
-    },
+    }, 
   });
   </script>
 <style scoped lang="scss">
