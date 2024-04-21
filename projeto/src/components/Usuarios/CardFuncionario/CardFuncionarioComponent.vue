@@ -2,21 +2,21 @@
    
     <section class="container-card">
         <div class="container-nome">
-            <p>Diciane</p>
-            <p>Financeiro</p>
+            <p>{{ nome }}</p>
+            <p>{{ perfil_str }}</p>
         </div>
         <div class="container-status">
-            <p>Status</p>
+            <p>{{ status }}</p>
         </div>
         <div class="container-documento">
             <img src="../../../assets/card_funcionario_icone_cpf_cnpj.png" alt="">
-            <p>072.345.334-87</p>
+            <p>{{ cpf_cnpj_formatado }}</p>
         </div>
         <div class="container-endereco">
             <img src="../../../assets/card_funcionario_icone_endereco.png" alt="">
             <div>
-               <p>Rua, numero</p>
-               <p>Cidade - Estado</p>
+               <p>{{ endereco_residencial }}</p>
+               <p>{{ cidade }}</p>
             </div>
           
         </div>
