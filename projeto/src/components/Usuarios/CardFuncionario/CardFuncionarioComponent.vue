@@ -33,6 +33,7 @@
       export default defineComponent({
         name: 'CardFuncionarioComponent',
         props: {
+          id:String,
           nome: String,
           cpf_cnpj_formatado:String,
           cidade:String,

@@ -15,8 +15,9 @@
 
              <div v-for="funcionario in usuarios" :key="funcionario.id">
                 <CardFuncionarioComponent 
+                :id="funcionario.id"
                 :nome="funcionario.nome" 
-                :cpf_cnpj_formatado="funcionario.id" 
+                :cpf_cnpj_formatado="funcionario.cpf_cnpj_formatado" 
                 :cidade="funcionario.cidade"
                 :endereco_residencial="funcionario.endereco_residencial"
                 :perfil_str="funcionario.perfil_str"
@@ -60,7 +61,9 @@
             async carregarUsuarios() {
               try {
                 const response_json = await UsuariosService.obterTodosUsuarios();
-                this.usuarios = response_json.results;
+                this.usuarios = [...response_json];
+                console.log("try:")
+                console.log(this.usuarios)
               } catch (error) {
                 console.error(error);
               }

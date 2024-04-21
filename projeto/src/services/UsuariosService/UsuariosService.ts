@@ -15,8 +15,21 @@
         }
       };
       let resposta_json;
-      const resposta=http
-      .get("/a/colaborador/?text=", { params, ...config })
+      let resposta;
+      let resposta_final
+      try {
+         resposta=await http.get("/a/colaborador/?text=", { params, ...config })
+         resposta_json=await resposta.data 
+         resposta_final=resposta_json.results
+         console.log(resposta_final)
+      } catch (e) {
+        console.error('Erro ao fazer requisição:', e)
+      }
+      return resposta_final;
+
+
+     
+    /*
       .then(function (response) {
         console.log(response.data);
         resposta_json=response.data
@@ -24,8 +37,8 @@
       .catch(function (error) {
         console.error('Erro ao fazer requisição:', error);
       });
-
-      return resposta_json;
+   */
+      
 
     }
  }
