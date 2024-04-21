@@ -11,7 +11,7 @@
                 </router-link>
               </div>
               <div class="card-opcoes-principais"> 
-                <router-link to="/usuario">
+                <router-link to="/usuarios">
                     <img src="../../../assets/utilitarios_opcoes_2.png"/>
                     <p>Usuários</p>
                 </router-link>
