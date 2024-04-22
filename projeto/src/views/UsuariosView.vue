@@ -36,6 +36,8 @@ main{
     }
     & .container-menu-lateral{
       grid-area:menu;
+      background-color: #0091FF;
+      height:100%;
     }
     & .container-conteudo{
       grid-area:container-conteudo;
