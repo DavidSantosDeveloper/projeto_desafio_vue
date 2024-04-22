@@ -11,7 +11,7 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  font-family: "Rubik", sans-serif;
+  font-family: "Mulish", sans-serif;
  
 }
 html,body{

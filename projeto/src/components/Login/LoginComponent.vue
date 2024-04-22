@@ -75,7 +75,7 @@ export default defineComponent({
   box-sizing: border-box;
   padding: 0px;
   margin: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Mulish", sans-serif;
   color: black;
 
 }
@@ -120,6 +120,7 @@ section.login{
     width: 100%;
     text-align: start;
     font-weight: bold;
+    font-size:12px;
   }
   & input{
     padding: 8px 5px;
@@ -150,13 +151,15 @@ section.login{
       color: black;
       font-weight: bold;
       text-decoration: none;
-      font-size: 1.15rem;
+      font-size: 16px;
     }
     & .butao-entrar{
       background-color: #000000;
       color: white;
+       width:149px;
+       height:48px;
 
-      padding: 5px 40px;
+      // padding: 5px 40px;
     }
   }
  
