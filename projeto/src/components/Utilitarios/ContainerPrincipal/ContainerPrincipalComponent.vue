@@ -5,7 +5,7 @@
             <div class="container-linha">
 
               <div class="card-opcoes-principais">  
-                <router-link to="">
+                <router-link to="/usuarios">
                   <img src="../../../assets/utilitarios_opcoes_1.png"/>
                   <p>Configurações</p>
                 </router-link>
@@ -17,37 +17,37 @@
                 </router-link>
               </div>
               <div class="card-opcoes-principais"> 
-                <router-link to="/usuario">
+                <router-link to="">
                     <img src="../../../assets/utilitarios_opcoes_3.png"/>
                     <p>Permissões</p>
                 </router-link>
               </div>
               <div class="card-opcoes-principais"> 
-                <router-link to="/usuario">
+                <router-link to="">
                     <img src="../../../assets/utilitarios_opcoes_4.png"/>
                     <p>Motivo de cancelamento</p>
                 </router-link>
               </div>
               <div class="card-opcoes-principais"> 
-                <router-link to="/usuario">
+                <router-link to="">
                     <img src="../../../assets/utilitarios_opcoes_5.png"/>
                     <p>Logs</p>
                 </router-link>
               </div>
               <div class="card-opcoes-principais"> 
-                <router-link to="/usuario">
+                <router-link to="">
                     <img src="../../../assets/utilitarios_opcoes_6.png"/>
                     <p>Segmentos</p>
                 </router-link>
               </div>
               <div class="card-opcoes-principais"> 
-                <router-link to="/usuario">
+                <router-link to="">
                     <img src="../../../assets/utilitarios_opcoes_7.png"/>
                     <p>Versões</p>
                 </router-link>
               </div>
               <div class="card-opcoes-principais"> 
-                <router-link to="/usuario">
+                <router-link to="">
                     <img src="../../../assets/utilitarios_opcoes_8.png"/>
                     <p>Feriados</p>
                 </router-link>
@@ -130,7 +130,12 @@
               min-height:108px;
               height:14.0625vh;
               max-height:500px;
-
+              &:hover{
+                -xpedu-transform: scale(1.3);
+                -ms-transform: scale(1.3);
+                transform: scale(1.1);
+                transition: 0.1s ease-in-out;
+              }
               & a{
                   display:flex;
                   flex-direction:column;
