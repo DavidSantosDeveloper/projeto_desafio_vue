@@ -5,7 +5,7 @@
 <div class="modal-dialog" id="modal-dialog" style="min-width:max-content !important; width:770px !important;">
     <div class="modal-content" id="modal-content" style="width:100%;">
       <div class="modal-header" id="container_header" >
-        <h1 class="modal-title fs-5" id="staticBackdropLabel" >Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel" >Novo Usuário</h1>
         <button type="button" id="butao-fechar" class="" data-bs-dismiss="modal" aria-label="Close">X</button>
       </div>
       <div class="" style="width:100%;">
@@ -585,17 +585,13 @@ div.modal_formulario{
           height:38px;
       }
       & fieldset.dados-basicos{
-        border:1px solid blue;
         display:flex;
         flex-direction: column;
         & .container-campos{
-          border:1px solid black;
+         
           display:flex;
-              & .custom-file-upload{
-                border:1px solid red;
-              }
+              
               & .container-1{
-                border:1px solid green;
                 width:100%;
                 padding-inline:10px;
                 display: flex;
@@ -646,7 +642,7 @@ div.modal_formulario{
                     align-items: center;
                     gap:8px;
                     width:100%;
-                    border:1px solid red;
+                    
                     & div{
                         display:flex;
                         flex-direction:column;
@@ -707,7 +703,6 @@ div.modal_formulario{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border:1px solid purple;
               & div{
                 display: flex;
                 flex-direction: row;
@@ -728,7 +723,6 @@ div.modal_formulario{
         }
 
         & fieldset.documentos{
-          border:2px solid red;
           width:100%;
           & div{
             width:100%;
@@ -751,15 +745,12 @@ div.modal_formulario{
                     width:100%;
                     
                  }
-                 label{
-                  // font-size:14px;
-                 }
+             
               }
             }         
           }
         }
         & fieldset.endereco{
-          border:2px solid green;
           width:100%;
           & div{
             width:100%;
@@ -784,7 +775,6 @@ div.modal_formulario{
           }
         }
         & fieldset.contato{
-          border:2px solid green;
           width:100%;
           & div{
               display: flex;
@@ -829,7 +819,7 @@ div.modal_formulario{
 
 // INPUT IMG personalizado
 .custom-file-upload input[type="file"] {
-  display: none; /* Oculta o botão de upload padrão */
+  display: none; 
 }
 
 .custom-file-upload label {
