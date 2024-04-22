@@ -57,7 +57,12 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  
+  & .container-nome{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
   & .container-status{
     background-color: #AEF5E4;
     display:flex;

@@ -25,7 +25,7 @@
       <!-- Add "scoped" attribute to limit CSS to this component only -->
  <style scoped lang="scss">
  .container-conteudo{
-  border:5px solid lightblue;
+  
   
   display: flex;
   flex-direction: column;

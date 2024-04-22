@@ -10,8 +10,8 @@
         </section>
 
         <section class="container-lista-de-usuarios" >
-             <!-- <MensagemSemUsuariosComponent /> -->
-             <ModalFormularioComponent/>
+             <MensagemSemUsuariosComponent  v-if="this.dadosEstaoCarregados.value==false"/>
+             <ModalFormularioComponent  />
 
              <div v-for="funcionario in usuarios" :key="funcionario.id">
                 <CardFuncionarioComponent 
@@ -33,7 +33,7 @@
    </template>
      
      <script lang="ts">
-     import { defineComponent } from 'vue';
+     import { defineComponent,reactive } from 'vue';
      import CardOpcaoComponent from "@/components/Utilitarios/CardOpcao/CardOpcaoComponent.vue"
      import MensagemSemUsuariosComponent from '@/components/Usuarios/MensagemSemUsuarios/MensagemSemUsuariosComponent.vue'
      import ModalFormularioComponent from "@/components/Usuarios/ModalFormulario/ModalFormularioComponent.vue"
@@ -52,7 +52,7 @@
         CardFuncionarioComponent
       },
       data() {
-              return {usuarios: [] };
+              return {usuarios: [] ,dadosEstaoCarregados:reactive({value:false})};
           },
       mounted() {
           this.carregarUsuarios();
@@ -65,8 +65,8 @@
               try {
                 const response_json = await UsuariosService.obterTodosUsuarios();
                 this.usuarios = [...response_json];
-                console.log("try:")
-                console.log(this.usuarios)
+                this.dadosEstaoCarregados.value=true
+            
               } catch (error) {
                 console.error(error);
               }
@@ -87,8 +87,9 @@
 
 
   & .container-menu-opcoes-principais{
-    border:5px solid rgb(224, 224, 145);
+   
         margin-top:10.027855vh;
+        margin-bottom: 20px;
         width:79.041916vw;
         min-width: fit-content;
 
@@ -110,12 +111,18 @@
     & img{
       min-height:35px;
       background-color: #0077FF;
+      border-radius:10px;
+    }
+    & button{
+      border:0px solid transparent;
     }
 
   }
   & .container-lista-de-usuarios{
      
-      // yyflex-grow: 1;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
   }
 
 }
