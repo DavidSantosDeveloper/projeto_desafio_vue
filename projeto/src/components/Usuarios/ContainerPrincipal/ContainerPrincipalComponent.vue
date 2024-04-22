@@ -39,7 +39,7 @@
      import ModalFormularioComponent from "@/components/Usuarios/ModalFormulario/ModalFormularioComponent.vue"
      import CardFuncionarioComponent from "@/components/Usuarios/CardFuncionario/CardFuncionarioComponent.vue"
      import UsuariosService from "../../../services/UsuariosService/UsuariosService"
-
+     
      export default defineComponent({
        name: 'ContainerPrincipalComponent',
        props: {
@@ -56,6 +56,9 @@
           },
       mounted() {
           this.carregarUsuarios();
+          // UsuariosService.cadrastrarUsuario({cidade:'TERESINA',bairro:'SACI'})
+
+          
       },
       methods:{
             async carregarUsuarios() {
