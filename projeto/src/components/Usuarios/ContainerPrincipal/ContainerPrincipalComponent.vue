@@ -83,10 +83,9 @@
   margin-left:0.5vw;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
 
- border:5px solid red;
+
+
   & .container-menu-opcoes-principais{
     border:5px solid rgb(224, 224, 145);
         margin-top:10.027855vh;
@@ -99,7 +98,7 @@
         gap:10px;    
   }
   & .opcoes{
-    border:5px solid blue;
+   
     min-width: 367px;
     width:27.470059vw;
     display:flex;
@@ -115,7 +114,7 @@
 
   }
   & .container-lista-de-usuarios{
-      border: 3px solid brown;
+     
       // yyflex-grow: 1;
   }
 
